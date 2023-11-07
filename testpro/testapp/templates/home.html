@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% block title %} 
+      Home
+{% endblock %}
+{% block content %}
+{% for message in messages %}
+
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong></strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+
+<div class="">
+    <div class="content1">
+        {% csrf_token %}
+        <div class="square1 twitch1" style="margin-bottom: 50px;">
+            <span class="one1"></span>
+            <span class="two1"></span>
+            <span class="three1"></span>
+            <div class="circle1">
+                <h2 class="DrugRadar1">mca fresher</h2>
+                <!-- <p>Welcome to our web site</p> -->
+            </div>
+        </div>
+
+        <a href="#" class="button1" target="_parent">
+            <span class="actual-text1">&nbsp;WELCOME&nbsp;</span>
+            <span class="hover-text1" aria-hidden="true">&nbsp;WELCOME&nbsp;</span>
+        </a>
+    </div>
+</div>
+{% endblock %}

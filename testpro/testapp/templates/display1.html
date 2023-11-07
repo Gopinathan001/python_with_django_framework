@@ -1,0 +1,50 @@
+{% extends "index1.html" %}
+{% block title %} 
+      Display
+{% endblock %}
+{% block content %}
+<div class="disform">
+  <br>
+  <div class="dishead">
+    <h3>Display Digital Locker Datas</h3>
+  </div>
+  {% csrf_token %}
+  <section class="table__body">
+  <table>
+    <thead>
+        <tr>
+            <th> Bank Name</th>
+            <th> Account Number </th>
+            <th> Password </th>
+            <th> Email ID </th>
+            <th> PhoneNo </th>
+            <th> Update </th>
+            <th> Delete </th>
+
+        </tr>
+    </thead>
+    {% for BDetail in Bank %}
+    <tbody>
+        <tr>
+          <td>{{ BDetail.bankname }}</td>
+          <td>{{ BDetail.Accountnumber }}</td>
+          <td>{{ BDetail.password }}</td>
+          <td>{{ BDetail.eemail }}</td>
+          <td>{{ BDetail.econtact }}</td>
+          <td>
+            <button type="button" class="btn  btn-success" href="/edit/{{ BDetail.id }}" >
+            <i class="fa fa-check"></i> Update</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" href="/delete/{{ BDetail.id }}">
+              <i class="fa fa-trash"></i> Delete</button>
+          </td>
+
+          </tr>
+    </tbody>
+    {% endfor %}
+</table>
+</section>
+
+  
+{% endblock %}

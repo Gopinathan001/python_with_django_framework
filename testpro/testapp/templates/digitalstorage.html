@@ -1,0 +1,44 @@
+{% extends "index1.html" %}
+{% block title %} 
+   Digital Locker
+{% endblock %}
+{% block content %}
+<div class="digform">
+   <form action="" method="POST">
+      {% csrf_token %}
+      <div class="reghead">
+         <h3>Digital Locker</h3>
+      </div>
+
+      <br>
+
+      <div class="input">
+         <input type="text" name="bankname" id="bankname" placeholder="Bank Name" required autofocus>
+      </div>
+
+      <div class="input">
+         <input type="number" name="Accountnumber" id="Accountnumber" placeholder="Account Number" required autofocus>
+      </div>
+
+      <div class="input">
+         <input type="password" name="password" id="password" placeholder="Password" required>
+      </div>
+
+      <div class="input">
+         <input type="email" name="email" id="email" placeholder="E-mail" pattern="[^ @]*@[^ @]*" required>
+     </div>
+
+      <div class="input">
+         <input type="number" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
+      </div>
+
+      
+
+      <div class="testbtn">
+
+         <button type="submit">Submit</button>
+
+      </div>
+   </form>
+</div>
+{% endblock %}

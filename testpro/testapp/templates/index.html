@@ -1,0 +1,28 @@
+{% include "header.html" %}
+{% include "navbar.html" %}
+
+<html>
+    <head>
+        
+        <title>
+            {% block title %} 
+
+            {% endblock %}
+        </title>
+        
+    </head>
+    </head>
+    <body>
+        {% block content %}
+ 
+        {% endblock %}
+    </body>
+</html>
+
+<script src="../static/src/javascript.js">
+    $(document).ready(function(){
+       $(".alert").hide(5000);
+    });
+
+    
+ </script>

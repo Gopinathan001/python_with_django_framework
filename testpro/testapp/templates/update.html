@@ -1,0 +1,48 @@
+{% extends "index1.html" %}
+{% block title %} 
+   Edit
+{% endblock %}
+{% block content %}
+<div class="digform">
+   <form action="" method="POST">
+      {% csrf_token %}
+      <div class="reghead">
+         <h3>Edit</h3>
+      </div>
+
+      <br>
+
+      <div class="input">
+         <input type="text" name="ID"  placeholder="ID" value="{{reEdite.id}}">
+      </div>
+
+      <div class="input">
+         <input type="text" name="bankname"  placeholder="Bank Name" value="{{reEdite.bankname}}" >
+      </div>
+
+      <div class="input">
+         <input type="number" name="Accountnumber" placeholder="Account Number" value="{{reEdite.Accountnumber}}" >
+      </div>
+
+      <div class="input">
+         <input type="text" name="password" placeholder="Password" value="{{reEdite.password}}" >
+      </div>
+
+      <div class="input">
+         <input type="email" name="email" placeholder="E-mail" value="{{reEdite.eemail}}" >
+     </div>
+
+      <div class="input">
+         <input type="number" name="phone" placeholder="Enter Your Phone Number" value="{{reEdite.econtact}}">
+      </div>
+
+      
+
+      <div class="testbtn">
+
+         <button type="submit">Update</button>
+
+      </div>
+   </form>
+</div>
+{% endblock %}
